@@ -9,13 +9,12 @@ const Chat = () => {
     const [allMessages, setAllMessages] = useState([]);
 
     useEffect(() => {
-        // Initialize socket when component mounts
+
         socket = io();
 
-        // Add event listener for "receive-message" event
+
         socket.on("receive-message", handleReceiveMessage);
 
-        // Cleanup function to remove event listener when component unmounts
         return () => {
             socket.off("receive-message", handleReceiveMessage);
         };
@@ -34,7 +33,7 @@ const Chat = () => {
             message,
         });
 
-        setMessage(""); // Clear the message input after sending
+        setMessage("");
     };
 
     return (
