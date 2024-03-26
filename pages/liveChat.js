@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import io from "socket.io-client";
+import styles from "@/styles/livechat.module.css"
+
 
 let socket;
 
@@ -37,8 +39,8 @@ const Chat = () => {
     };
 
     return (
-        <div>
-            <h1>Live Chat</h1>
+        <div className={styles.chat}>
+            <h1>Welcome to the Chat Room</h1>
             <p>Enter a username</p>
             <input value={username} onChange={(e) => setUsername(e.target.value)} />
             <br />
@@ -52,8 +54,8 @@ const Chat = () => {
                     ))}
                     <br />
                     <form onSubmit={handleSubmit}>
-                        <input name="message" value={message} onChange={(e) => setMessage(e.target.value)} />
-                        <button type="submit">Send</button>
+                        <input className={styles.input} name="message" value={message} onChange={(e) => setMessage(e.target.value)} />
+                        <button type="submit" className={styles.submit}>Send</button>
                     </form>
                 </div>
             )}
