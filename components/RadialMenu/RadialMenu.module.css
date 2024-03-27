@@ -1,0 +1,106 @@
+.circularButtonContainer {
+    position: relative;
+    margin-top: 100px;
+    text-align: center;
+  }
+  
+  .mainBtn {
+    width: 100px;
+    height: 100px;
+    color: var(--background-color);
+    background-color: var(--foreground-color);
+    border: var(--background-color) solid 4px;
+    border-radius: 50%;
+    position: relative;
+    z-index: 1;
+  }
+
+  .mainBtnActive {
+    background-color: var(--background-color-2);
+  }
+  
+  
+  .subButtons {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 1%;
+    margin-top: -10px;
+  }
+  
+  
+  .subButtons>.link {
+    position: absolute;
+    animation-fill-mode: forwards;  
+    animation-delay: 0.1s;
+  }
+
+  .subButtons>.link:first-of-type{
+    animation: moveButtonOne 0.15s linear;
+    animation-fill-mode: forwards;
+  }
+
+  .subButtons>.link:nth-of-type(2){
+    animation: moveButtonTwo 0.15s linear;
+    animation-fill-mode: forwards;
+  }
+
+  .subButtons>.link:nth-of-type(3){
+    animation: moveButtonThree 0.15s linear;
+    animation-fill-mode: forwards;
+  }
+  .subButtons>.link:nth-of-type(4){
+    animation: moveButtonFour 0.15s linear;
+    animation-fill-mode: forwards;
+  }
+  
+  .subBtn {
+    width: 50px;
+    height: 50px;
+    background-color: var(--foreground-color);
+    color: var(--background-color);
+    border: none;
+    border-radius: 50%;
+    margin: 10px;
+    opacity: 100;
+  }
+  
+  .link:visited {
+    color: var(--background-color);
+  }
+  
+  @keyframes moveButtonOne {
+    0% {
+      transform: translateY(0px);
+    }
+    100% {
+      transform: translateY(-30px) translateX(-70px);
+    }
+  }
+
+  @keyframes moveButtonTwo {
+    0% {
+      transform: translateY(0px);
+    }
+    100% {
+      transform: translateY(-70px) translateX(-15px);
+    }
+  }
+
+  @keyframes moveButtonThree {
+    0% {
+      transform: translateY(0px);
+    }
+    100% {
+      transform: translateY(-70px) translateX(50px);
+    }
+  }
+
+  @keyframes moveButtonFour {
+    0% {
+      transform: translateY(0px);
+    }
+    100% {
+      transform: translateY(-30px) translateX(100px);
+    }
+  }

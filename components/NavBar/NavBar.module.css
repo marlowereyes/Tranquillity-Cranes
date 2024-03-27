@@ -1,0 +1,29 @@
+.outerContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    justify-content: space-around;
+    align-items: center;
+    height:5rem;
+    width:100vw;
+    background-color: var(--background-color-2);
+    position: fixed;
+    bottom: 0;
+}
+
+.radialMenu{
+    margin-top: -150px;
+}
+
+.link>button{
+    background-color: var(--accent-color);
+    color:var(--foreground-color);
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.link:visited {
+    color: var(--background-color);
+  }

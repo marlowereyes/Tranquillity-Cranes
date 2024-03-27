@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
 import io from "socket.io-client";
 import styles from "@/styles/livechat.module.css"
+import NavBar from "@/components/NavBar";
 
 
 let socket;
 
-const Chat = () => {
+export default function Chat(){
     const [username, setUsername] = useState("");
     const [message, setMessage] = useState("");
     const [allMessages, setAllMessages] = useState([]);
@@ -21,6 +22,7 @@ const Chat = () => {
             socket.off("receive-message", handleReceiveMessage);
         };
     }, []);
+
 
     const handleReceiveMessage = (data) => {
         console.log(data);
@@ -59,8 +61,7 @@ const Chat = () => {
                     </form>
                 </div>
             )}
+            <NavBar/>
         </div>
     );
 };
-
-export default Chat;
