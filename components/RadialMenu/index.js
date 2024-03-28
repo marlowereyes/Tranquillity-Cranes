@@ -1,11 +1,13 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import styles from './RadialMenu.module.css';
 import Link from 'next/link';
 
-export default function RadialMenu(){
+export default function RadialMenu() {
   const [showSubButtons, setShowSubButtons] = useState(false);
 
-  console.log('showSubButtons:', showSubButtons);
+  useEffect(() => {
+    console.log('showSubButtons:', showSubButtons);
+  }, []);
 
   return (
     <div className={styles.circularButtonContainer}>
@@ -17,12 +19,12 @@ export default function RadialMenu(){
       </button>
       {showSubButtons && (
         <div className={styles.subButtons}>
-            <Link className={styles.link} href="/liveChat"><button className={styles.subBtn}>Chat</button></Link>
-            <Link className={styles.link} href="/about"><button className={styles.subBtn}>About</button></Link>
-            <Link className={styles.link} href="/sleep"><button className={styles.subBtn}>Sleep</button></Link>
-            <Link className={styles.link} href="/activities"><button className={styles.subBtn}>Activities</button></Link>
+          <Link className={styles.link} href="/liveChat"><button className={styles.subBtn}>Chat</button></Link>
+          <Link className={styles.link} href="/about"><button className={styles.subBtn}>About</button></Link>
+          <Link className={styles.link} href="/sleep"><button className={styles.subBtn}>Sleep</button></Link>
+          <Link className={styles.link} href="/activities"><button className={styles.subBtn}>Activities</button></Link>
         </div>
       )}
     </div>
   );
-};
+}
