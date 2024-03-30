@@ -1,67 +1,79 @@
-import { useEffect, useState } from "react";
-import io from "socket.io-client";
-import styles from "@/styles/livechat.module.css"
+import React, { useState, useEffect, useRef } from "react";
+import SocketIOClient from "socket.io-client";
+import styles from "@/styles/livechat.module.css";
 import NavBar from "@/components/NavBar";
 
+const Chat = () => {
+  const inputRef = useRef(null);
+  const [username, setUsername] = useState("");
+  const [message, setMessage] = useState("");
+  const [allMessages, setAllMessages] = useState([]);
 
-let socket;
+  useEffect(() => {
+    const socket = SocketIOClient.connect(process.env.BASE_URL, {
+      path: "/api/socketio",
+    });
 
-export default function Chat(){
-    const [username, setUsername] = useState("");
-    const [message, setMessage] = useState("");
-    const [allMessages, setAllMessages] = useState([]);
+    socket.on("connect", () => {
+      console.log("SOCKET CONNECTED!", socket.id);
+    });
 
-    useEffect(() => {
+    socket.on("message", (message) => {
+      setAllMessages([...allMessages, message]);
+    });
 
-        socket = io();
+    if (socket) return () => socket.disconnect();
+  }, [allMessages]);
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (message) {
+      const newMessage = {
+        username,
+        message,
+      };
+      const resp = await fetch("/api/chat", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(newMessage),
+      });
+      if (resp.ok) setMessage("");
+    }
+  };
 
-        socket.on("receive-message", handleReceiveMessage);
-
-        return () => {
-            socket.off("receive-message", handleReceiveMessage);
-        };
-    }, []);
-
-
-    const handleReceiveMessage = (data) => {
-        console.log(data);
-        setAllMessages((prevMessages) => [...prevMessages, data]);
-    };
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-
-        socket.emit("send-message", {
-            username,
-            message,
-        });
-
-        setMessage("");
-    };
-
-    return (
-        <div className={styles.chat}>
-            <h1>Welcome to the Chat Room</h1>
-            <p>Enter a username</p>
-            <input value={username} onChange={(e) => setUsername(e.target.value)} />
-            <br />
-            <br />
-            {!!username && (
-                <div>
-                    {allMessages.map(({ username, message }, index) => (
-                        <p key={index}>
-                            {username}: {message}
-                        </p>
-                    ))}
-                    <br />
-                    <form onSubmit={handleSubmit}>
-                        <input className={styles.input} name="message" value={message} onChange={(e) => setMessage(e.target.value)} />
-                        <button type="submit" className={styles.submit}>Send</button>
-                    </form>
-                </div>
-            )}
-            <NavBar/>
+  return (
+    <div className={styles.chat}>
+      <h1>Welcome to the Chat Room</h1>
+      <p>Enter a username</p>
+      <input value={username} onChange={(e) => setUsername(e.target.value)} />
+      <br />
+      <br />
+      {!!username && (
+        <div>
+          {allMessages.map(({ username, message }, index) => (
+            <p key={index}>
+              {username}: {message}
+            </p>
+          ))}
+          <br />
+          <form onSubmit={handleSubmit}>
+            <input
+              className={styles.input}
+              name="message"
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+            />
+            <button type="submit" className={styles.submit}>
+              Send
+            </button>
+          </form>
         </div>
-    );
+      )}
+      <NavBar />
+    </div>
+  );
 };
+
+export default Chat;
