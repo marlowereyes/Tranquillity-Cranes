@@ -3,7 +3,7 @@ import SocketIOClient from "socket.io-client";
 import styles from "@/styles/livechat.module.css";
 import NavBar from "@/components/NavBar";
 
-const Chat = () => {
+export default function Chat() {
   const inputRef = useRef(null);
   const [username, setUsername] = useState("");
   const [message, setMessage] = useState("");
@@ -18,12 +18,12 @@ const Chat = () => {
       console.log("SOCKET CONNECTED!", socket.id);
     });
 
-    socket.on("message", (message) => {
-      setAllMessages([...allMessages, message]);
+    socket.on("message", (newMessage) => {
+      setAllMessages((prevMessages) => [...prevMessages, newMessage]);
     });
 
-    if (socket) return () => socket.disconnect();
-  }, [allMessages]);
+    return () => socket.disconnect();
+  }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -75,5 +75,3 @@ const Chat = () => {
     </div>
   );
 };
-
-export default Chat;
