@@ -58,7 +58,7 @@ export default function Chat() {
               className={
                 msgUsername === username
                   ? styles.senderMessage
-                  : styles.receiverMessage // Make sure this class name is correct
+                  : styles.receiverMessage
               }
             >
               {msgUsername === username ? (
