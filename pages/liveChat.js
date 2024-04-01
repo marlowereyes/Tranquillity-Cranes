@@ -52,9 +52,22 @@ export default function Chat() {
       <br />
       {!!username && (
         <div>
-          {allMessages.map(({ username, message }, index) => (
-            <p key={index}>
-              {username}: {message}
+          {allMessages.map(({ username: msgUsername, message }, index) => (
+            <p
+              key={index}
+              className={
+                msgUsername === username
+                  ? styles.senderMessage
+                  : styles.receiverMessage // Make sure this class name is correct
+              }
+            >
+              {msgUsername === username ? (
+                message
+              ) : (
+                <>
+                  {msgUsername}: {message}
+                </>
+              )}
             </p>
           ))}
           <br />
@@ -74,4 +87,4 @@ export default function Chat() {
       <NavBar />
     </div>
   );
-};
+}
