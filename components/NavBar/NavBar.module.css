@@ -4,15 +4,20 @@
     justify-content: space-between;
     justify-content: space-around;
     align-items: center;
-    height:5rem;
+    text-align: center;
+    height:7rem;
     width:100vw;
     background-color: var(--background-color-2);
     position: fixed;
     bottom: 0;
 }
 
+.innerContainer>h3{
+    color:var(--background-color);
+}
+
 .radialMenu{
-    margin-top: -150px;
+    margin-top: -140px;
 }
 
 .link>button{
@@ -22,6 +27,7 @@
     width: 50px;
     height: 50px;
     border-radius: 50%;
+    margin-top: 20px;
 }
 
 .link:visited {

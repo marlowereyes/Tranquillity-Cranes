@@ -20,7 +20,6 @@ export default function RadialMenu() {
       {showSubButtons && (
         <div className={styles.subButtons}>
           <Link className={styles.link} href="/liveChat"><button className={styles.subBtn}>Chat</button></Link>
-          <Link className={styles.link} href="/about"><button className={styles.subBtn}>About</button></Link>
           <Link className={styles.link} href="/sleep"><button className={styles.subBtn}>Sleep</button></Link>
           <Link className={styles.link} href="/activities"><button className={styles.subBtn}>Activities</button></Link>
         </div>

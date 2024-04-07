@@ -32,14 +32,14 @@ export default function Chat() {
         username,
         message,
       };
-      const resp = await fetch("/api/chat", {
-        method: "POST",
+      const resp = await fetch("/api/chat", {   // Send a POST request to the server-side endpoint "/api/chat"
+        method: "POST", //POST request are data sent to the server that don't remain in the browser history
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(newMessage),
+        body: JSON.stringify(newMessage),  // Convert the newMessage object to a JSON string and include it in the request body
       });
-      if (resp.ok) setMessage("");
+      if (resp.ok) setMessage("");     // Check if the response is successful  // If successful, clear the message variable (empty the input field)
     }
   };
 
