@@ -1,0 +1,118 @@
+.quizResults {
+    background: linear-gradient(to bottom, var(--gradient-blue) 60%, var(--background-color));
+    border: solid;
+    min-height: 100vh;
+}
+
+.quizContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 8rem;
+    color: var(--foreground-color);
+    font-family: Helvetica;
+}
+
+.quizContainer > h1 {
+    margin-bottom: 8px;
+}
+
+.quizContainer > h3 {
+    margin-top: 0px;
+}
+
+.quizContainer > p {
+    text-align: center;
+    width: 369px;
+    margin-top: 32px;
+}
+
+.resultBold {
+    font-weight: 600;
+}
+
+ .resultButton {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin: 32px 16px 0px 16px;
+ }
+
+ .resultButton > button {
+    border-radius: 20px;
+    height: 100px;
+    font-size: 20px;
+    color: var(--foreground-color);
+    box-shadow: var(--box-shadow);
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+ }
+
+ .resultButtonContent {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 8px;
+    align-items: center;
+    width: 350px;
+ }
+
+ .resultName > p {
+    padding-left: 8px;
+    text-align: left;
+ }
+
+ .resultName {
+    display: flex;
+    align-items: center;
+ }
+
+ .navigateButtons {
+    display: flex;
+    justify-content: space-between;
+    margin: 24px 16px 0px 16px;
+ }
+
+ .navigateQuiz > button {
+    border-radius: 20px;
+    font-size: 20px;
+    background-color: var(--background-color-3);
+    color:  var(--foreground-color);
+    box-shadow: var(--box-shadow);
+    border: none;
+    padding: 16px;
+ }
+
+ .navigateHome > button {
+    border-radius: 20px;
+    font-size: 20px;
+    background-color: var(--foreground-color);
+    color: var(--background-color);
+    box-shadow: var(--box-shadow);
+    border: none;
+    padding: 16px;
+ }
+
+.icon {
+    color: var(--foreground-color);
+    width: 64px;
+}
+
+.bobAnimation {
+    animation: bobUpDown 2s infinite;
+    margin-top: 40px;
+  }
+  
+  @keyframes bobUpDown {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }

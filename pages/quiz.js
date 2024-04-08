@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
-import styles from "@/styles/Home.module.css";
+import styles from "@/styles/Quiz.module.css";
 import Link from "next/link";
 import RadialMenu from "@/components/RadialMenu";
 import NavBar from "@/components/NavBar";
@@ -16,8 +16,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={`${styles.main}`}>
+        <h1>Activities Quiz</h1>
+        <Quiz />
        <NavBar/>
-       <Link href='./quiz'>Quiz</Link>
       </main>
     </>
   );
