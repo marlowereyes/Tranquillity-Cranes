@@ -26,7 +26,28 @@
     position: absolute;
     top: 1%;
     margin-top: -10px;
-    
+  }
+
+  .mainBtn>img{
+    width:80%;
+  }
+
+  .mainBtnActive>img{
+    width:80%;
+    transform: rotate(90deg);
+    animation: rotate 0.5s linear;
+  }
+
+  @keyframes rotate{
+    0% {transform: rotate(0deg);
+    }
+    100% {transform: rotate(90deg);
+    }
+  }
+
+  .subBtn>img{
+    width:50%;
+    height: 50%;
   }
   
   

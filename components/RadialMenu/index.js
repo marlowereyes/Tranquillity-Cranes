@@ -15,13 +15,13 @@ export default function RadialMenu() {
         className={`${styles.mainBtn} ${showSubButtons ? styles.mainBtnActive : ''}`} 
         onClick={() => setShowSubButtons(!showSubButtons)}
       >
-        Open Up More Buttons
+        <img src='../images/Logo.svg'></img>
       </button>
       {showSubButtons && (
         <div className={styles.subButtons}>
-          <Link className={styles.link} href="/liveChat"><button className={styles.subBtn}>Chat</button></Link>
-          <Link className={styles.link} href="/sleep"><button className={styles.subBtn}>Sleep</button></Link>
-          <Link className={styles.link} href="/activities"><button className={styles.subBtn}>Activities</button></Link>
+          <Link className={styles.link} href="/liveChat"><button className={styles.subBtn}><img src='../images/Chat.svg'></img></button></Link>
+          <Link className={styles.link} href="/sleep"><button className={styles.subBtn}><img src='../images/Sleep.svg'></img></button></Link>
+          <Link className={styles.link} href="/activities"><button className={styles.subBtn}><img src='../images/Activities.svg'></img></button></Link>
         </div>
       )}
     </div>

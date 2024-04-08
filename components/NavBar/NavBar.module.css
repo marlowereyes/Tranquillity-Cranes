@@ -7,7 +7,7 @@
     text-align: center;
     height:7rem;
     width:100vw;
-    background-color: var(--background-color-2);
+    background-color: var(--foreground-color);
     position: fixed;
     bottom: 0;
 }
@@ -18,17 +18,19 @@
 
 .radialMenu{
     margin-top: -140px;
+    padding-bottom: 20px;
 }
 
 .link>button{
-    background-color: var(--accent-color);
+    background-color: transparent;
     color:var(--foreground-color);
     border: none;
-    width: 50px;
-    height: 50px;
+    width: 80px;
+    height: 40px;
     border-radius: 50%;
     margin-top: 20px;
 }
+
 
 .link:visited {
     color: var(--background-color);
