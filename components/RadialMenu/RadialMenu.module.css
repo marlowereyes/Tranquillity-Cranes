@@ -35,7 +35,7 @@
   .mainBtnActive>img{
     width:80%;
     transform: rotate(90deg);
-    animation: rotate 0.5s linear;
+    animation: rotate 0.2s linear;
   }
 
   @keyframes rotate{

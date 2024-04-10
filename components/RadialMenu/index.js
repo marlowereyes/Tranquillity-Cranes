@@ -15,7 +15,7 @@ export default function RadialMenu() {
         className={`${styles.mainBtn} ${showSubButtons ? styles.mainBtnActive : ''}`} 
         onClick={() => setShowSubButtons(!showSubButtons)}
       >
-        <img src='../images/Logo.svg'></img>
+        <img src='../images/Logo 2.svg'></img>
       </button>
       {showSubButtons && (
         <div className={styles.subButtons}>
