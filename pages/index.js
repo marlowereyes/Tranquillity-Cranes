@@ -7,6 +7,8 @@ import NavBar from "@/components/NavBar";
 import Quiz from "@/components/Quiz";
 
 export default function Home() {
+
+  var name = process.env.NEXT_PUBLIC_NAME;
   return (
     <>
       <Head>
@@ -16,8 +18,10 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={`${styles.main}`}>
+
        <NavBar/>
        <Link href='./quiz'>Quiz</Link>
+       {name}
       </main>
     </>
   );
