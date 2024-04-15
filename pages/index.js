@@ -8,7 +8,7 @@ import Quiz from "@/components/Quiz";
 
 export default function Home() {
 
-  var name = process.env.OPENAI_API_KEY;
+  var name = process.env.NEXT_PUBLIC_NAME;
   return (
     <>
       <Head>
@@ -18,9 +18,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={`${styles.main}`}>
-        {name}
        <NavBar/>
        <Link href='./quiz'>Quiz</Link>
+       {name}
       </main>
     </>
   );
