@@ -1,14 +1,34 @@
+import { createRef, useEffect } from "react";
+import { useRouter } from "next/router";
 import Head from "next/head";
-import Image from "next/image";
-import styles from "@/styles/Home.module.css";
-import Link from "next/link";
-import RadialMenu from "@/components/RadialMenu";
-import NavBar from "@/components/NavBar";
-import Quiz from "@/components/Quiz";
+import styles from "@/styles/index.module.css";
+import lottie from "lottie-web";
 
 export default function Home() {
+  let animationContainer = createRef();
 
-  var name = process.env.NEXT_PUBLIC_NAME;
+  useEffect(() => {
+    const anim = lottie.loadAnimation({
+      container: animationContainer.current,
+      rerender: "svg",
+      loop: true,
+      autoplay: true,
+      path: "/animations/data.json",
+    });
+
+    return () => anim.destroy();
+  }, []);
+
+  const router = useRouter();
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      router.push("/home");
+    }, 8000);
+
+    return () => clearTimeout(timeout);
+  }, []);
+
   return (
     <>
       <Head>
@@ -18,10 +38,12 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={`${styles.main}`}>
-
-       <NavBar/>
-       <Link href='./quiz'>Quiz</Link>
-       {name}
+        <div className={styles.logo}>
+          <img src="./images/Logo.png" alt="Logo" />
+        </div>
+        <div className={`${styles.animation__container} ${styles.translate}`}>
+          <div className={styles.animation} ref={animationContainer} />
+        </div>
       </main>
     </>
   );
