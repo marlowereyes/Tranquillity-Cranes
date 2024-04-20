@@ -20,6 +20,7 @@ export default function Home() {
       <main className={`${styles.main}`}>
        <NavBar/>
        <Link href='./quiz'className={styles.link}>Quiz</Link>
+       <Link href='./breathe'className={styles.link}>Breathe</Link>
        {name}
       </main>
     </>

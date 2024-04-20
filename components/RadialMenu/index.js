@@ -20,7 +20,7 @@ export default function RadialMenu() {
       {showSubButtons && (
         <div className={styles.subButtons}>
           <Link className={styles.link} href="/liveChat"><button className={styles.subBtn}><img src='../images/Chat.svg'></img></button></Link>
-          <Link className={styles.link} href="/sleep"><button className={styles.subBtn}><img src='../images/Sleep.svg'></img></button></Link>
+          <Link className={styles.link} href="/breathe"><button className={styles.subBtn}><img src='../images/Sleep.svg'></img></button></Link>
           <Link className={styles.link} href="/activities"><button className={styles.subBtn}><img src='../images/Activities.svg'></img></button></Link>
         </div>
       )}
