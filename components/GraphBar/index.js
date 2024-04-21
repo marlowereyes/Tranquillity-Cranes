@@ -20,7 +20,7 @@ ChartJS.register(
     Legend
 )
 
-export default function graphBar() {
+export default function GraphBar() {
     const [chartData, setChartData] = useState({
         datasets:[]
     })
@@ -46,7 +46,7 @@ export default function graphBar() {
         })
 
         setChartOptions({
-            IndexAxis: 'y', 
+            
             plugins: {
                 legend: {
                     position: 'top'
@@ -62,8 +62,8 @@ export default function graphBar() {
     },[])
 
     return(
-        <>
-            <Bar data={chartData} option={chartOptions} style={{maxHeight: "500px", maxHeight: "300px", width: "1000px"}}/>
-        </>
+        
+            <Bar data={chartData} option={chartOptions} style={{width: "500px", height:"300px"}}/>
+
     )
 }

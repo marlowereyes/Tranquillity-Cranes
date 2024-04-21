@@ -2,7 +2,7 @@ import NavBar from "@/components/NavBar";
 import styles from "@/styles/About.module.css";
 import Link from "next/link";
 import Head from "next/head";
-import graphBar from "@/components/GraphBar";
+import GraphBar from "@/components/GraphBar";
 
 export default function About() {
     return( 
@@ -14,7 +14,9 @@ export default function About() {
                 <link rel="icon" href="/favicon.ico"/>
             </Head>
             <main className={`${styles.main}`}>
-                <graphBar/>
+                <div className={styles.aboutApp}>
+                    <GraphBar/>
+                </div>
                 <NavBar/>
             </main>
         </>
