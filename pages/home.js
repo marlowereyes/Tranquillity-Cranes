@@ -21,6 +21,8 @@ export default function Home() {
        <NavBar/>
        <Link href='./quiz'>Quiz</Link>
        <Link href='./about'>About App</Link>
+       <Link href='./quiz'className={styles.link}>Quiz</Link>
+       <Link href='./breathe'className={styles.link}>Breathe</Link>
        {name}
       </main>
     </>
