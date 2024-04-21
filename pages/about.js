@@ -5,7 +5,7 @@ import Head from "next/head";
 import { Bar } from "react-chartjs-2";
 
 export default function About() {
-    return(
+    return( 
         <>
             <Head>
                 <title>About App</title>
@@ -14,7 +14,7 @@ export default function About() {
                 <link rel="icon" href="/favicon.ico"/>
             </Head>
             <main className={`${styles.main}`}>
-                
+                    
                 <NavBar/>
             </main>
         </>
