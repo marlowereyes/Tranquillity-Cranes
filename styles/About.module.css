@@ -4,7 +4,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 6rem;
-    min-height: 20vh;
+    min-height: 100vh;
     max-width: 100vw;
     background-color: var(--background-color);
 }
@@ -16,9 +16,23 @@
     border: 2px solid var(--background-color-3);
     border-radius: 10px;
     padding: 25px;
-    margin-top: 5em;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    box-shadow: var(--box-shadow);
+    gap: 5em;
 }
 
-.infoApp { 
+.header {
+    display: flex;
+    justify-content: center;
 
+}
+
+.headerText {
+    color: var(--foreground-color);
+    box-shadow: var(--box-shadow);
+    border-radius: 10px;
+    padding: 10px;
+    margin-right: 5em;
+    white-space: nowrap;
 }

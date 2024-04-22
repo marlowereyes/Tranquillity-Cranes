@@ -28,7 +28,7 @@ export default function GraphBar() {
     
     useEffect(() => {
         setChartData({
-            labels: ["0%", "10%", "20", "30%", "40%"],
+            labels: ["12-17 years", "18-34 years", "35-49 years", "50-64 years", "65 years or older"],
             datasets: [
                 {
                     label: 'Male',
@@ -61,9 +61,9 @@ export default function GraphBar() {
         })
     },[])
 
-    return(
-        
-            <Bar data={chartData} option={chartOptions} style={{maxWidth: "500px", maxHeight: "500px"}}/>
-
-    )
+    return (
+        <div style={{ maxWidth: "800px", maxHeight: "600px", height: "500px"}}>
+            <Bar data={chartData} options={chartOptions} />
+        </div>
+    );
 }
