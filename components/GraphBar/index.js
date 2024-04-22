@@ -63,7 +63,7 @@ export default function GraphBar() {
 
     return(
         
-            <Bar data={chartData} option={chartOptions} style={{maxWidth: "500px", maxHeight: "500px", marginLeft: "600px"}}/>
+            <Bar data={chartData} option={chartOptions} style={{maxWidth: "500px", maxHeight: "500px"}}/>
 
     )
 }
