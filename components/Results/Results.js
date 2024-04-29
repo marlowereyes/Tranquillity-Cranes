@@ -36,7 +36,7 @@ const ResultsContainer = ({resultId}) => {
             <Link href="/quiz" className={styles.navigateQuiz}>
                 <button>Retake Quiz</button>
             </Link>
-            <Link href="/" className={styles.navigateHome}>
+            <Link href="/home" className={styles.navigateHome}>
                 <button>Home</button>
             </Link>
         </div>

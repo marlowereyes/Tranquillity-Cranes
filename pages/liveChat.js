@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import SocketIOClient from "socket.io-client";
-import styles from "@/styles/livechat.module.css";
+import styles from "@/styles/LiveChat.module.css";
 import NavBar from "@/components/NavBar";
+import HeadArea from "@/components/HeadArea";
 
 export default function Chat() {
   const inputRef = useRef(null);
@@ -44,6 +45,8 @@ export default function Chat() {
   };
 
   return (
+    <>
+    <HeadArea title="Live Chat" description="Learn about our app"/>
     <div className={styles.chat}>
       <h1>Welcome to the Chat Room</h1>
       <p>Enter a username</p>
@@ -86,5 +89,6 @@ export default function Chat() {
       )}
       <NavBar />
     </div>
+    </>
   );
 }
