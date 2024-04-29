@@ -1,16 +1,22 @@
 :root {
-    background-color: var(--background-color);
-    --background-color:#ECEBE9;
-    --background-color-2:#323232;
+    --background-color: #ECEBE9;
+    --background-color-2: #323232;
     --background-color-3: #A0E4FF;
-    --foreground-color:#075880;
-    --accent-color:#6FEDE7;
+    --foreground-color: #075880;
+    --accent-color: #6FEDE7;
     --gradient-blue: #c1e7f5;
     --box-shadow: 1px 5px 10px 3px rgba(0, 0, 0, 0.25);
 }
 
-*{
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap');
+
+.lexend {
+    font-family: 'Lexend', sans-serif;
+}
+
+* {
     margin: 0;
     padding: 0;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Lexend', sans-serif;
 }
+
