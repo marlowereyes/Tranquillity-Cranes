@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@fontsource/lexend": "^5.0.20",
     "axios": "^1.6.8",
     "chart.js": "^4.4.2",
     "lottie-web": "^5.12.2",
