@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import NavBar from '@/components/NavBar';
 import HeadArea from '@/components/HeadArea';
+import OpenAI from 'openai';
 
 export default function Display() {
   const router = useRouter();
