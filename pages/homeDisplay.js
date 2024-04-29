@@ -13,7 +13,7 @@ export default function Display() {
   
   return (
     <>
-    <link rel="icon" href="/favicon.ico" sizes="any"/>
+    <link rel="icon" href="/public/favicon.ico"/>
     <HeadArea title="Home" description="Learn about our app"/>
     <div className={styles.homeContainer}>
       {name && <h1>Hello<br/> {name}!</h1>}
