@@ -12,7 +12,9 @@ export default function Home() {
     <>
       <HeadArea title="Activities Quiz" description="Learn about our app"/>
       <main className={`${styles.main}`}>
-        <h1>Activities Quiz</h1>
+        <div className={styles.header}>
+          <h1>Tranquillity Cranes</h1>
+        </div>
         <Quiz />
        <NavBar/>
       </main>
