@@ -18,7 +18,8 @@
     "react-chartjs-2": "^5.2.0",
     "react-dom": "^18",
     "socket.io": "^4.7.5",
-    "socket.io-client": "^4.7.5"
+    "socket.io-client": "^4.7.5",
+    "socketio": "^1.0.0"
   },
   "devDependencies": {
     "dotenv": "^16.4.5",
