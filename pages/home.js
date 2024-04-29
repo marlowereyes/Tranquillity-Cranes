@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import NavBar from '@/components/NavBar';
 import HeadArea from '@/components/HeadArea';
+import ChatGPT from '@/components/ChatGpt/chatGPT';
 
 export default function Display() {
   const router = useRouter();
@@ -15,7 +16,7 @@ export default function Display() {
     <div className={styles.homeContainer}>
       <Image src={"/images/terry-fly.png"} width={200} height={150} className={styles.terryAgh}/>
       <div className={styles.chatGPT}>
-        <p>“Write an inspiring quote from Chat GPT”</p>
+        <p><ChatGPT/></p>
       </div>
       <Link href='/' className={styles.homeLinks}><button>Tutorial</button></Link>
       <Link href='/quiz' className={styles.homeLinks}><button className={styles.lightBlue}>Activities Quiz</button></Link>
