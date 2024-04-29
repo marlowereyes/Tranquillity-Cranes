@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import SocketIOClient from "socket.io-client";
-import styles from "@/styles/LiveChat.module.css";
+import styles from "@/styles/livechat.module.css";
 import NavBar from "@/components/NavBar";
 import HeadArea from "@/components/HeadArea";
 
