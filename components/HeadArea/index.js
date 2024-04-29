@@ -12,7 +12,7 @@ export default function HeadArea({
         <meta name="author" content="Marlowe Reyes, Brian Paragas, Deluka LGH" />
         <meta name="description" content={description} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href={"/Tranquility-favicon.ico"} />
+        <link rel="icon" href={"/Favicon.ico"} />
       </Head>
       </>
     )
