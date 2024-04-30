@@ -6,6 +6,7 @@ import HeadArea from "@/components/HeadArea";
 
 export default function Chat() {
   const inputRef = useRef(null);
+  const messagesEndRef = useRef(null); // Reference for the end of messages container
   const [username, setUsername] = useState("");
   const [message, setMessage] = useState("");
   const [allMessages, setAllMessages] = useState([]);
@@ -26,6 +27,11 @@ export default function Chat() {
     return () => socket.disconnect();
   }, []);
 
+  useEffect(() => {
+    // Scroll to the end of messages when allMessages change
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  }, [allMessages]);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (message) {
@@ -33,62 +39,66 @@ export default function Chat() {
         username,
         message,
       };
-      const resp = await fetch("/api/chat", {   // Send a POST request to the server-side endpoint "/api/chat"
-        method: "POST", //POST request are data sent to the server that don't remain in the browser history
+      const resp = await fetch("/api/chat", {
+        method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(newMessage),  // Convert the newMessage object to a JSON string and include it in the request body
+        body: JSON.stringify(newMessage),
       });
-      if (resp.ok) setMessage("");     // Check if the response is successful  // If successful, clear the message variable (empty the input field)
+      if (resp.ok) setMessage("");
     }
   };
 
   return (
     <>
-    <HeadArea title="Live Chat" description="Learn about our app"/>
-    <div className={styles.chat}>
-      <h1>Welcome to the Chat Room</h1>
-      <p>Enter a username</p>
-      <input value={username} onChange={(e) => setUsername(e.target.value)} />
-      <br />
-      <br />
-      {!!username && (
-        <div>
-          {allMessages.map(({ username: msgUsername, message }, index) => (
-            <p
-              key={index}
-              className={
-                msgUsername === username
-                  ? styles.senderMessage
-                  : styles.receiverMessage
-              }
-            >
-              {msgUsername === username ? (
-                message
-              ) : (
-                <>
-                  {msgUsername}: {message}
-                </>
-              )}
-            </p>
-          ))}
-          <br />
-          <form onSubmit={handleSubmit}>
-            <input
-              className={styles.input}
-              name="message"
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
-            />
-            <button type="submit" className={styles.submit}>
-              Send
-            </button>
-          </form>
-        </div>
-      )}
-      <NavBar />
-    </div>
+      <HeadArea title="Live Chat" description="Learn about our app" />
+      <div className={styles.chat}>
+        <h1>Welcome to the Chat Room</h1>
+        <p>Enter a username</p>
+        <input
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+        />
+        <br />
+        <br />
+        {!!username && (
+          <div className={styles.messagesContainer}>
+            {allMessages.map(({ username: msgUsername, message }, index) => (
+              <p
+                key={index}
+                className={
+                  msgUsername === username
+                    ? styles.senderMessage
+                    : styles.receiverMessage
+                }
+              >
+                {msgUsername === username ? (
+                  message
+                ) : (
+                  <>
+                    {msgUsername}: {message}
+                  </>
+                )}
+              </p>
+            ))}
+            {/* Reference element for scrolling to bottom */}
+            <div ref={messagesEndRef}></div>
+          </div>
+        )}
+        <form onSubmit={handleSubmit} className={styles.form}>
+          <input
+            className={styles.input}
+            name="message"
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+          />
+          <button type="submit" className={styles.submit}>
+            Send
+          </button>
+        </form>
+        <NavBar />
+      </div>
     </>
   );
 }

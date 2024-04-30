@@ -5,7 +5,6 @@
     align-items: center;
     padding: 6rem;
     min-height: 20vh;
-    background-color: var(--background-color);
   }
 
   .chat{
@@ -14,10 +13,22 @@
     align-items: center;
     text-align: center;
     color:var(--foreground-color);
-    background-color: var(--background-color);
     font-weight: bold;
+    scrollbar-color: var(--background-color-3) transparent;
   }
 
+  .form {
+    position: fixed;
+    bottom: 23%; /* Adjust as needed */
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .messagesContainer {
+    max-height: 40vh; /* Set the maximum height to 40% of the viewport height */
+    overflow-y: auto; /* Add vertical scroll if content overflows */
+  }
+  
   .chat>h1{
     width:14rem;
     margin: auto;
@@ -59,8 +70,8 @@
 
   .senderMessage {
     text-align: right;
-    background-color: var(--foreground-color);
-    color: var(--background-color);
+    background-color: var(--accent-color);
+    color: var(--foreground-color);
     border-radius: 8px;
     padding: 8px;
     margin: 8px;

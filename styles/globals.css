@@ -11,12 +11,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap');
 
 .lexend {
-    font-family: 'Lexend', sans-serif;
+    font-family: 'Lexend';
 }
 
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Lexend', sans-serif;
+    font-family: 'Lexend';
 }
 
