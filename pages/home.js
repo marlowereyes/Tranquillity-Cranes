@@ -4,16 +4,32 @@ import Image from 'next/image';
 import Link from 'next/link';
 import NavBar from '@/components/NavBar';
 import HeadArea from '@/components/HeadArea';
+import { useEffect } from 'react';
+import { useState } from 'react';
 
 export default function Display() {
   const router = useRouter();
   const { imageName, name } = router.query;
+  const [motivationalQuote, setMotivationalQuote] = useState('');
+
+  useEffect(() => {
+    (async function() {
+      const response = await fetch('api/gpt', {
+        method: 'POST',
+      })
+      const data = await response.json();
+      setMotivationalQuote(data);
+    })();
+  }, [])
   
   return (
     <>
     <HeadArea title="Home" description="Learn about our app"/>
     <div className={styles.homeContainer}>
       <Image src={"/images/terry-fly.png"} width={200} height={150} className={styles.terryAgh}/>
+      <div className={styles.motivationalContainer}>
+        <p>{motivationalQuote}</p>
+      </div>
       <Link href='/' className={styles.homeLinks}><button>Tutorial</button></Link>
       <Link href='/quiz' className={styles.homeLinks}><button className={styles.lightBlue}>Activities Quiz</button></Link>
       <NavBar />
