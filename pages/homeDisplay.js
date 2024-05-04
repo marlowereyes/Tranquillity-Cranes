@@ -5,10 +5,24 @@ import Image from 'next/image';
 import Link from 'next/link';
 import NavBar from '@/components/NavBar';
 import HeadArea from '@/components/HeadArea';
+import { useState } from 'react';
+import { useEffect } from 'react';
+
 
 export default function Display() {
   const router = useRouter();
   const { imageName, name } = router.query;
+  const [motivationalQuote, setMotivationalQuote] = useState('');
+
+  useEffect(() => {
+    (async function() {
+      const response = await fetch('api/gpt', {
+        method: 'POST',
+      })
+      const data = await response.json();
+      setMotivationalQuote(data);
+    })();
+  }, [])
   
   return (
     <>
@@ -24,7 +38,7 @@ export default function Display() {
         />
       )}
       <div className={styles.chatGPT}>
-        <p>“Write an inspiring quote from Chat GPT”</p>
+        <p>{motivationalQuote}</p>
       </div>
       <Link href='/' className={styles.homeLinks}><button>Tutorial</button></Link>
       <Link href='/quiz' className={styles.homeLinks}><button className={styles.lightBlue}>Activities Quiz</button></Link>
