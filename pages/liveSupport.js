@@ -4,6 +4,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import NavBar from '@/components/NavBar';
 import HeadArea from '@/components/HeadArea';
+import Header2 from '@/components/Header2';
+import Card from '@/components/Card';
 
 export default function Support() {
   const router = useRouter();
@@ -13,20 +15,10 @@ export default function Support() {
     <>
     <HeadArea title="Live Support" description="Learn about our app"/>
     <div className={styles.supportContainer}>
-        <div className={styles.publicChatContainer}>
-            <div className={styles.publicChatHeader}>
-                <h2>Live Public Chat Room</h2>
-            </div>
-            <p>The Live Public Chat Room allows you to chat with other users. Sharing experiences with others who relate to your struggles can help combat feelings of isolation and loneliness, fostering a supportive environment where individuals feel heard and validated.</p>
-        </div>
-        <Link href="/liveChat" className={styles.chatButton}><button>Chat Now</button></Link>
-        <div className={styles.liveSupportContainer}>
-            <div className={styles.liveSupportHeader}>
-                <h2>Urgent Help Resources</h2>
-            </div>
-            <p>The Urgent Help Resources page offers immediate assistance for individuals facing crisis situations, providing a curated list of hotlines, helplines, and online resources. This page serves as a vital resource directory, offering timely aid and guidance during challenging times.</p>
-        </div>
-        <Link href="/urgentHelp" className={styles.helpButton}><button>Get Help</button></Link>
+        <Header2 headerName={'Support'} />
+        <Card hrefCard={'/liveChat'} src={'/images/supportCardImg/liveChatImg.jpg'} textB={'Chat!'} bgBColor={'var(--foreground-color)'} textBColor={'var(--background-color-3)'}  src2={'/images/tc-Designs/crdDesign.png'} title={'Live Public Chat Room'} description={'The Live Public Chat Room allows you to chat with other users. Sharing experiences with others who relate to your struggles can help combat feelings of isolation and loneliness, fostering a supportive environment where individuals feel heard and validated.'}/>
+        <Card hrefCard={'/urgentHelp'} src={'/images/supportCardImg/urgentHelpImg.jpg'} textB={'Get Help!'} bgColor={'var(--background-color-2)'} textColor={'var(--background-color)'} bgBColor={'var(--accent-color)'} textBColor={'var(--background-color-2)'}  src2={'/images/tc-Designs/h2Design.png'} title={'Urgent Help Lines'} description={'The Urgent Help Resources page offers immediate assistance for individuals facing crisis situations, providing a curated list of hotlines, helplines, and online resources. This page serves as a vital resource directory, offering timely aid and guidance during challenging times.'}/>
+        <Card src={'/images/supportCardImg/articleImg.jpg'} src2={'/images/tc-Designs/1x/crdDesign2.png'} textB={'available November 2024'} bgColor={'var(--input-grey)'} textColor={'grey'} bgBColor={'grey'} textBColor={'var(--background-color)'}  title={'Mental Health Articles'} description={"Reading mental health articles can offer valuable insights, coping strategies, and reassurance, providing a sense of understanding and validation for individuals experiencing anxiety. It can also empower individuals by equipping them with knowledge about their condition and available resources for seeking help and support. "} />
         <NavBar/>
     </div>
     </>

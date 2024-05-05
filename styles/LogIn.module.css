@@ -6,19 +6,14 @@
   }
   
   .logInContainer {
-    margin-top: 16px;
+    background: var(--linear-gradient-0);
+    padding-bottom: 12rem;
   }
-  
-  .header {
-    height: 148px;
-    width: 430px;
-    background-color: #075880;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color:#A0E4FF;
+
+  .logInContainer > form {
+    z-index: 1;
   }
+
   
   .enter {
     display:flex;
@@ -30,24 +25,27 @@
     text-align: center;
     font-size: 20px;
     font-weight: 700;
-    padding: 32px 0px;
+    padding: 8px 0px;
     width: 380px;
+    color: var(--foreground-color);
   }
   
   .enter > input {
     border-radius: 15px;
-    padding: 16px 0px;
+    padding: 8px 0px;
     width: 380px;
     display: flex;
     justify-content: center;
     text-align: center;
-    background-color: #ECEBE9;
+    background-color: var(--input-grey);
     border: none;
-    font-size: 20px;
+    font-size: 16px;
+    margin-bottom: 24px;
+    z-index: 2;
   }
   
   .enter > input:focus {
-    border: solid blue;
+    border: solid var(--foreground-color);
   }
   
   .imageContainer {
@@ -55,7 +53,7 @@
     transition: background-color 0.3s ease;
     width: 184px;
     height: 160px;
-    box-shadow: 1px 5px 10px 3px rgba(0, 0, 0, 0.3);
+    box-shadow: var(--box-shadow);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -63,7 +61,7 @@
   }
   .imageContainer.clicked {
     box-shadow: inset 0 4px 4px 0 rgba(0, 0, 0, 0.3);
-    background-color: #A0E4FF;
+    background-color: var(--accent-color);
     width: 184px;
     height: 160px;
     border-radius: 30px;
@@ -77,18 +75,9 @@
     width: 430px;
   }
   
-  .submitEgg {
-    border-radius: 30px;
-    padding: 16px 32px;
-    background-color: #075880;
-    border: none;
-    color:#A0E4FF;
-    box-shadow: 1px 5px 10px 3px rgba(0, 0, 0, 0.3);
-  }
-  
   .submitEggContainer {
     width: 384px;
     display: flex;
     justify-content: flex-end;
-    margin: 24px;
+    margin: 16px 0px 32px 0px;
   }

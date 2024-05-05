@@ -1,0 +1,73 @@
+.main {
+    display: flex;
+    justify-content: center;
+}
+
+.settingContainer {
+    width: 430px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 12rem;
+    background-color: var(--background-color);
+}
+
+.backArrow {
+    transform: scaleX(-1);
+    margin-top: -32px;
+    margin-bottom: 16px;
+}
+
+.settingSection {
+    width: 398px;
+}
+
+.setting {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 16px;
+    border: solid;
+    border-radius: 8px;
+    margin-top: 8px;
+    margin-bottom: 16px;
+}
+
+.settingText {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 10px 16px;
+    border: solid;
+    border-radius: 8px;
+    margin-top: 8px;
+    margin-bottom: 16px;
+}
+
+.settingText > p {
+    line-height: 30px;
+}
+
+.largeText {
+    font-size: 32px;
+    line-height: 25px;
+}
+
+.appLight {
+    color: var(--foreground-color);
+}
+
+.appLight p{
+    color: var(--background-color-2);
+}
+  
+
+.appDark {
+  background-color: var(--background-color-2);
+  color: var(--background-color-3);
+}
+
+.appDark p {
+    color: var(--background-color);
+}

@@ -1,16 +1,21 @@
 .quizResults {
-    background: linear-gradient(to bottom, var(--gradient-blue) 60%, var(--background-color));
-    border: solid;
-    min-height: 100vh;
+    display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.mainQuizContainer {
+   background: var(--linear-gradient-0);
+   padding-bottom: 12rem;
 }
 
 .quizContainer {
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding-top: 8rem;
+    padding-top: 64px;
     color: var(--foreground-color);
-    font-family: Helvetica;
+    width: 430px;
 }
 
 .quizContainer > h1 {
@@ -43,7 +48,7 @@
     height: 100px;
     font-size: 20px;
     color: var(--foreground-color);
-    box-shadow: var(--box-shadow);
+    background-color: var(--background-color-3);
     border: none;
     display: flex;
     justify-content: center;
@@ -53,14 +58,14 @@
 
  .resultButtonContent {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     margin-left: 8px;
     align-items: center;
     width: 350px;
  }
 
- .resultName > p {
-    padding-left: 8px;
+ .resultButtonContent > p {
+    padding-left: 24px;
     text-align: left;
  }
 
@@ -72,27 +77,7 @@
  .navigateButtons {
     display: flex;
     justify-content: space-between;
-    margin: 24px 16px 0px 16px;
- }
-
- .navigateQuiz > button {
-    border-radius: 20px;
-    font-size: 20px;
-    background-color: var(--background-color-3);
-    color:  var(--foreground-color);
-    box-shadow: var(--box-shadow);
-    border: none;
-    padding: 16px;
- }
-
- .navigateHome > button {
-    border-radius: 20px;
-    font-size: 20px;
-    background-color: var(--foreground-color);
-    color: var(--background-color);
-    box-shadow: var(--box-shadow);
-    border: none;
-    padding: 16px;
+    margin: 8px 16px 0px 16px;
  }
 
 .icon {

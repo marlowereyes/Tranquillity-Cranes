@@ -1,0 +1,38 @@
+.containero {
+    background-color: var(--foreground-color);
+    width: 430px;
+    height: 96px;
+    position: absolute;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+  }
+  
+  .imageContainer {
+    position: absolute;
+    margin-top: 10px;
+  }
+  
+  .imageContainer1 {
+    position: absolute;
+  }
+
+  .animation {
+    height: 500px;
+    margin-top: -169px;
+    transform: scaleX(-1);
+  }
+  
+  .containera {
+    display: flex;
+    justify-content: center;
+    height: 196px;
+  }
+
+  .header2 {
+    width: 430px;
+    height: 184px;
+  }

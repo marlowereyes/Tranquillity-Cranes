@@ -3,6 +3,8 @@ import styles from './Quiz.module.css';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
 import { QUESTIONS, RESULT_MAP } from './consts';
+import Header from '../Header';
+import Button from '../Button';
 
 const Quiz = () => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -63,7 +65,8 @@ const Quiz = () => {
 
   return (
     <div className={styles.quizContainer}>
-      <Image src="/images/terry-fly.png" width={150} height={100} className={styles.bobAnimation} />
+      <Header />
+      <h1>Activities Quiz</h1>
       <div className={styles.questionNumber}>
         {currentQuestionIndex < QUESTIONS.length ? (
           <p>{`Question ${currentQuestionIndex + 1}`}</p>
@@ -83,19 +86,17 @@ const Quiz = () => {
               key={answerIndex}
               onClick={() => handleAnswerSelect(answerIndex)}
               style={{
-                backgroundColor: selectedAnswerIndex === answerIndex ? '#17668C' : 'initial',
-                color: selectedAnswerIndex === answerIndex ? 'white' : '#17668C',
+                backgroundColor: selectedAnswerIndex === answerIndex ? 'var(--accent-color)' : 'initial',
+                color: selectedAnswerIndex === answerIndex ? 'var(--foreground-color)' : 'var(--foreground-color)',
               }}
             >
               {answer}
             </button>
           ))}
           <div className={styles.navigateQuiz}>
-            <button onClick={handlePrevious} disabled={currentQuestionIndex === 0}>
-              Previous
-            </button>
+            <Button onClick={handlePrevious} text={'Previous'} disabled={currentQuestionIndex === 0}/>
             {selectedAnswerIndex !== null && (
-              <button onClick={handleNextClick}>Next</button>
+              <Button onClick={handleNextClick} text={'Next'} bgColor={'var(--foreground-color)'} textColor={'var(--background-color-3)'}/>
             )}
           </div>
         </div>

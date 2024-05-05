@@ -1,12 +1,27 @@
 .main {
     display: flex;
+    justify-content: center;
+    color: var(--foreground-color);
+}
+
+.mainAbout {
+    display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding: 6rem;
-    min-height: 100vh;
-    max-width: 100vw;
     background-color: var(--background-color);
+    width: 340px;
+    padding-bottom: 12rem;
+}
+
+.backArrow {
+    margin-top: -32px;
+    margin-bottom: 16px;
+    width: 398px;
+}
+
+.flip {
+    transform: scaleX(-1);
 }
 
 .aboutApp {
@@ -15,11 +30,12 @@
     background-color: var(--background-color-3);   
     border: 2px solid var(--background-color-3);
     border-radius: 10px;
-    padding: 25px;
     margin-top: 20px;
     margin-bottom: 50px;
     box-shadow: var(--box-shadow);
     gap: 5em;
+    width: 382px;
+    padding: 16px;
 }
 
 .header {

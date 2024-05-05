@@ -3,6 +3,8 @@ import Link from "next/link";
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 import HeadArea from "@/components/HeadArea";
+import Button from "@/components/Button";
+import Header from "@/components/Header";
 
 export default function LogIn() {
   const [name, setName] = useState('');
@@ -35,9 +37,7 @@ export default function LogIn() {
     <>
       <HeadArea title="Login" description="Learn about our app"/>
       <main className={`${styles.main}`}>
-        <div className={styles.header}>
-          <h1>Tranquillity Cranes</h1>
-        </div>
+        <Header />
         <div className={styles.logInContainer}>
           <form onSubmit={handleSubmit} className={styles.enter}>
             <h2>What is your name?</h2>
@@ -88,7 +88,7 @@ export default function LogIn() {
               </div>
             </div>
             <div className={styles.submitEggContainer}>
-            <button type="submit" className={styles.submitEgg}>Submit</button>
+            <Button text={'Submit'}/>
             </div>
           </form>
         </div>
