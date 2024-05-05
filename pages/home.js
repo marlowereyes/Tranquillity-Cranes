@@ -6,6 +6,7 @@ import NavBar from '@/components/NavBar';
 import HeadArea from '@/components/HeadArea';
 import { useEffect } from 'react';
 import { useState } from 'react';
+import Button from '@/components/Button';
 
 export default function Display() {
   const router = useRouter();
@@ -25,42 +26,21 @@ export default function Display() {
   return (
     <>
     <HeadArea title="Home" description="Learn about our app"/>
+    <div className={styles.mainHomeContainer}>
     <div className={styles.homeContainer}>
-      <Image src={"/images/terry-fly.png"} width={200} height={150} className={styles.terryAgh}/>
-      <div className={styles.motivationalContainer}>
+    <h1><span className={styles.helloSpan}>Hello</span><br/> Marlowe!</h1>
+        <Image
+          src={`/images/egg3.png`}
+          width={106} height={132}
+        />
+      <div className={styles.chatGPT}>
         <p>{motivationalQuote}</p>
       </div>
-      <Link href='/' className={styles.homeLinks}><button>Tutorial</button></Link>
-      <Link href='/quiz' className={styles.homeLinks}><button className={styles.lightBlue}>Activities Quiz</button></Link>
+      <Button text={'Tutorial'} href={'/'}/>
+      <Button text={'Activities Quiz'} href={'/quiz'} bgColor={'var(--foreground-color)'} textColor={'var(--background-color-3)'}/>
       <NavBar />
+    </div>
     </div>
     </>
   );
 }
-
-//import Head from "next/head";
-//import Image from "next/image";
-//import styles from "@/styles/Home.module.css";
-//import Link from "next/link";
-//import RadialMenu from "@/components/RadialMenu";
-//import NavBar from "@/components/NavBar";
-//import Quiz from "@/components/Quiz";
-//import HeadArea from "@/components/HeadArea";
-//
-//export default function Home() {
-//
-//  var name = process.env.NEXT_PUBLIC_NAME;
-//  return (
-//    <>
-//      <HeadArea title="Test Home" description="Learn about our app"/>
-//      <main className={`${styles.main}`}>
-//       <NavBar/>
-//       <Link href='./about'>About App</Link>
-//       <Link href='./quiz'className={styles.link}>Quiz</Link>
-//       <Link href='./breathe'className={styles.link}>Breathe</Link>
-//       {name}
-//      </main>
-//    </>
-//  );
-//}
-//

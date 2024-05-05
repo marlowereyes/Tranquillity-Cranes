@@ -25,34 +25,46 @@
   }
 
   .messagesContainer {
-    max-height: 40vh; /* Set the maximum height to 40% of the viewport height */
-    overflow-y: auto; /* Add vertical scroll if content overflows */
+    max-height: 40vh;
+    overflow-y: auto; 
   }
   
   .chat>h1{
-    width:14rem;
+    width:300px;
     margin: auto;
   }
 
-  .chat>input{
-    background-color: var(--foreground-color);
-    color:var(--background-color);
-    border-radius: 8px;
-    border:none;
-    padding: 4px;
+  .chat > p {
+    color: var(--background-color-2);
+    margin-top: 8px;
   }
 
-  .chat>input:focus{
-    outline:none;
+  .chat > input {
+    border-radius: 15px;
+    padding: 10px 0px;
+    width: 280px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: #ECEBE9;
+    border: none;
+    font-size: 16px;
+    margin-top: 8px;
+  }
+  
+  .chat > input:focus {
+    border: solid blue;
   }
 
   .input{
-    background-color: var(--foreground-color);
-    color:var(--background-color);
-    border-radius: 8px 0px 0px 8px;
+    background-color: var(--background-color-3);
+    color:var(--background-color-2);
+    border-radius: 30px 0px 0px 30px;
     border: none;
-    padding: 4px;
+    padding: 8px;
     margin-left:-3rem;
+    width: 300px;
+    font-size: 16px;
   }
 
   .input:focus{
@@ -63,9 +75,10 @@
     background-color: var(--foreground-color);
     border: none;
     color:var(--background-color);
-    border-radius: 0px 8px 8px 0px;
-    padding:4px;
+    border-radius: 0px 30px 32px 0px;
+    padding:8px;
     position: fixed;
+    font-size: 16px;
   }
 
   .senderMessage {

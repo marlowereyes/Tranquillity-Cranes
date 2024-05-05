@@ -3,6 +3,7 @@ import SocketIOClient from "socket.io-client";
 import styles from "@/styles/livechat.module.css";
 import NavBar from "@/components/NavBar";
 import HeadArea from "@/components/HeadArea";
+import Header from "@/components/Header";
 
 export default function Chat() {
   const inputRef = useRef(null);
@@ -53,12 +54,14 @@ export default function Chat() {
   return (
     <>
       <HeadArea title="Live Chat" description="Learn about our app" />
+      <Header />
       <div className={styles.chat}>
         <h1>Welcome to the Chat Room</h1>
         <p>Enter a username</p>
         <input
           value={username}
           onChange={(e) => setUsername(e.target.value)}
+          placeholder="enter username"
         />
         <br />
         <br />

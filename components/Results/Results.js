@@ -4,6 +4,7 @@ import Image from "next/image";
 import { RESULT_MAP } from "@/components/Quiz/consts";
 import * as styles from "./Results.module.css";
 import Info from "../Icons/Info";
+import Button from "../Button";
 
 const ResultsContainer = ({resultId}) => {
     console.log({resultId})
@@ -11,6 +12,7 @@ const ResultsContainer = ({resultId}) => {
     const result = RESULT_MAP[resultId];
     return result ? (
     <div className={styles.quizResults}>
+        <div className={styles.mainQuizContainer}>
         <div className={styles.quizContainer}>
             <h1>Quiz Completed!</h1>
             <Image src="/images/terry-fly.png" width={150} height={100} className={styles.bobAnimation} />
@@ -22,22 +24,16 @@ const ResultsContainer = ({resultId}) => {
             {result.actions.map((action) => {
                 return (<button key={action.name}>
                     <div className={styles.resultButtonContent}>
-                        <div className={styles.resultName}>
                             <action.IconComponent className={styles.icon}/>
                             <p>{action.name}</p>
-                        </div>
-                        <Info width={32} height={32}/>
                     </div>
                 </button>)
             })}
         </div>
         <div className={styles.navigateButtons}>
-            <Link href="/quiz" className={styles.navigateQuiz}>
-                <button>Retake Quiz</button>
-            </Link>
-            <Link href="/home" className={styles.navigateHome}>
-                <button>Home</button>
-            </Link>
+            <Button href={'/quiz'} text={'Retake Quiz'} bgColor={'var(--foreground-color)'} textColor={'var(--background-color-3)'}/>
+            <Button href={'/home'} text={'Home'} bgColor={'var(--foreground-color)'} textColor={'var(--background-color-3)'}/>
+        </div>
         </div>
     </div>
     ) : (

@@ -10,6 +10,7 @@
     background-color: var(--foreground-color);
     position: fixed;
     bottom: 0;
+    z-index: 5;
 }
 
 .innerContainer>h3{

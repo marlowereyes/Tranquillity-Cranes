@@ -1,11 +1,16 @@
 :root {
-    --background-color: #ECEBE9;
+    --background-color: #FFFDFA;
     --background-color-2: #323232;
     --background-color-3: #A0E4FF;
     --foreground-color: #075880;
     --accent-color: #6FEDE7;
     --gradient-blue: #c1e7f5;
+    --input-grey: #ECEBE9;
+
     --box-shadow: 1px 5px 10px 3px rgba(0, 0, 0, 0.25);
+
+    --linear-gradient: linear-gradient(115deg, var(--gradient-blue), var(--background-color));
+    --linear-gradient-0: linear-gradient(0deg, var(--gradient-blue), var(--background-color));
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap');
