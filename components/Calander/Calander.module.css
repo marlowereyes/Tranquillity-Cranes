@@ -33,3 +33,13 @@
     margin-bottom: 20px;
 }
 
+.old {
+    display: flex;
+    border: 1px solid var(--foreground-color);
+    padding: 10px;
+    font-size: 12px;
+    justify-content: center;
+    font-weight: 500;
+    font-size: large;
+    color: gray;
+}

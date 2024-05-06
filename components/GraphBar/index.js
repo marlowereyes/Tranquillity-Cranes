@@ -8,6 +8,7 @@ import {
     Title,
     Tooltip,
     Legend,
+    Colors,
 } from 'chart.js'
 import { useEffect, useState } from 'react';
 
@@ -34,13 +35,13 @@ export default function GraphBar() {
                     label: 'Male',
                     data: [14, 18, 16, 11, 6],
                     borderColor: 'rgb(0, 0, 225)',
-                    backgroundColor: 'rgba(0, 0, 225, 0.5)'                        
+                    backgroundColor: 'rgb(111, 237, 231)'                        
                 },
                 {
                     label: 'Female',
                     data: [24, 32, 25, 19, 10],
-                    borderColor: 'rgb(255, 192, 203)',
-                    backgroundColor: 'rgba(255, 192, 203, 0.5)'
+                    borderColor: 'rgb(0, 0, 139)',
+                    backgroundColor: 'rgba(0, 0, 139, 0.5)'
                 }
             ]
         })

@@ -14,6 +14,9 @@ export default function Calander() {
                 <div class={styles.weekend}>Fri</div>
                 <div class={styles.weekend}>Sat</div>
 
+                <div class={styles.old}>28</div>
+                <div class={styles.old}>29</div>
+                <div class={styles.old}>30</div>
                 <div class={styles.box}>1</div>
                 <div class={styles.box}>2</div>
                 <div class={styles.box}>3</div>
@@ -46,24 +49,6 @@ export default function Calander() {
                 <div class={styles.box}>29</div>
                 <div class={styles.box}>30</div>
                 <div class={styles.box}>31</div>
-                <div class={styles.box}>32</div>
-                <div class={styles.box}>33</div>
-                <div class={styles.box}>34</div>
-                <div class={styles.box}>35</div>
-                <div class={styles.box}>36</div>
-                <div class={styles.box}>37</div>
-                <div class={styles.box}>38</div>
-                <div class={styles.box}>39</div>
-                <div class={styles.box}>40</div>
-                <div class={styles.box}>41</div>
-                <div class={styles.box}>42</div>
-                <div class={styles.box}>43</div>
-                <div class={styles.box}>44</div>
-                <div class={styles.box}>45</div>
-                <div class={styles.box}>46</div>
-                <div class={styles.box}>47</div>
-                <div class={styles.box}>48</div>
-                <div class={styles.box}>49</div>
             </div>
         </div>
 
