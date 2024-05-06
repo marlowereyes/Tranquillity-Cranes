@@ -1,0 +1,46 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mainHelpContainer {
+    width: 430px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mainHelpContainer > h1 {
+    margin-bottom: 32px;
+    color: var(--foreground-color);
+}
+
+.button {
+    border-radius: 30px;
+    padding: 9px 14px 9px 32px;
+    font-size: 16px;
+    text-decoration: none;
+    background-color: var(--background-color);
+    border: solid 3px;
+    color: var(--foreground-color);
+    box-sizing: border-box;
+    margin-right: 4px;
+}
+
+.check {
+    color: var(--background-color);
+}
+
+
+.activeButton {
+    background-color: var(--foreground-color);
+    box-shadow: none;
+    color: var(--background-color);
+    padding: 12px 30px;
+}
+
+.buttonContainer {
+    width: 398px;
+    z-index: 10;
+}
