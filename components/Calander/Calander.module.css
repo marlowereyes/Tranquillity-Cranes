@@ -1,19 +1,35 @@
+.mainContainer {
+    padding: 10px;
+    border: 2px var(--foreground-color) solid;
+    border-radius: 10;
+    width: 400px;
+    border-radius: 13px;
+}
+
 .calanderContainer {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    padding: 5px;
     margin: 0 auto;
-    margin-top: 10em;
-    width: 300px;
+    width: 400px;
 }
 
 .box {
+    display: flex;
     border: 1px solid var(--foreground-color);
     padding: 10px;
     font-size: 12px;
-
+    justify-content: center;
+    font-weight: 500;
+    font-size: large;
 }
 
 .weekend {
     color: var(--foreground-color);
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px var(--foreground-color) solid;
+    font-size: large;
+    padding: 10px;
+    margin-bottom: 20px;
 }
+
