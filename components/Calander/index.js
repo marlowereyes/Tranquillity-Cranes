@@ -1,9 +1,14 @@
 import styles from './Calander.module.css'
+import NavBar from '../NavBar'
+import HeadArea from '../HeadArea'
+import Header from '../Header'
 
 export default function Calander() {
 
     return(
         <>
+            <HeadArea title="Activities" description="Check Your Activities"/>
+            <Header/>
             <div className={styles.calanderContainer}>
                 <div class={styles.weekend}>Sun</div>
                 <div class={styles.weekend}>Mon</div>
@@ -64,6 +69,8 @@ export default function Calander() {
                 <div class={styles.box}>48</div>
                 <div class={styles.box}>49</div>
             </div>
+            <NavBar/>
+            
         </>
     )
 }
