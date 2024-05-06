@@ -8,7 +8,7 @@ export default function NavBar(){
         <>
             <div className={styles.outerContainer}>
                 <div className={styles.innerContainer}>
-                <Link className={styles.link} href="/home"><button><img src='../images/Home.svg'></img></button></Link>
+                <Link className={styles.link} href="/home"><button><img src='../images/Home.svg' width='40px'></img></button></Link>
                 <h3>Home</h3>
                 </div>
                 <div className={styles.innerContainer}>
@@ -16,7 +16,7 @@ export default function NavBar(){
                 <h3>Menu</h3>
                 </div>
                 <div className={styles.innerContainer}>
-                <Link className={styles.link} href="/profile"><button><img src='../images/Profile.svg'></img></button></Link>
+                <Link className={styles.link} href="/profile"><button><img src='../images/Profile.svg' width='40px'></img></button></Link>
                 <h3>Profile</h3>
                 </div>
             </div>
