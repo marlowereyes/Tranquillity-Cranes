@@ -47,21 +47,27 @@ export default function LogIn() {
               onChange={(e) => setName(e.target.value)}
               placeholder="enter your name"
               className={styles.nameInput}
+              tabindex="0"
             />
             <h2>Choose an egg that resonates with you the most</h2>
             <div className={styles.imagesContainer}>
               <div 
                 className={`${styles.imageContainer} ${clickedImage === 'egg1' ? styles.clicked : ''}`}
                 onClick={() => handleImageClick('egg1')}
+                onKeyDown={() => handleImageClick('egg1')}
+                tabindex="1"
               >
                 <img
                   src="./images/egg1.png"
                   alt="Image 1"
                 />
+                
               </div>
               <div 
                 className={`${styles.imageContainer} ${clickedImage === 'egg2' ? styles.clicked : ''}`}
                 onClick={() => handleImageClick('egg2')}
+                onKeyDown={() => handleImageClick('egg2')}
+                tabindex="2"
               >
                 <img
                   src="./images/egg2.png"
@@ -71,6 +77,8 @@ export default function LogIn() {
               <div 
                 className={`${styles.imageContainer} ${clickedImage === 'egg3' ? styles.clicked : ''}`}
                 onClick={() => handleImageClick('egg3')}
+                onKeyDown={() => handleImageClick('egg3')}
+                tabindex="3"
               >
                 <img
                   src="./images/egg3.png"
@@ -80,6 +88,8 @@ export default function LogIn() {
               <div 
                 className={`${styles.imageContainer} ${clickedImage === 'egg4' ? styles.clicked : ''}`}
                 onClick={() => handleImageClick('egg4')}
+                onKeyDown={() => handleImageClick('egg4')}
+                tabindex="4"
               >
                 <img
                   src="./images/egg4.png"
