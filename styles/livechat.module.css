@@ -19,7 +19,7 @@
 
 .form {
   position: fixed;
-  bottom: 22%;
+  bottom: 22%; /* Adjust as needed */
   left: 50%;
   transform: translateX(-50%);
 }
@@ -27,6 +27,7 @@
 .messagesContainer {
   margin-top: -20px;
   max-height: 20vh;
+  max-width: 26vw;
   overflow-y: auto; 
 }
 
@@ -83,7 +84,7 @@
 }
 
 .senderMessage {
-  text-align: right;
+  text-align:justify;
   background-color: var(--accent-color);
   color: var(--foreground-color);
   border-radius: 8px;
