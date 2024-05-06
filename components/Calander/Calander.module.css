@@ -1,0 +1,19 @@
+.calanderContainer {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    padding: 5px;
+    margin: 0 auto;
+    margin-top: 10em;
+    width: 300px;
+}
+
+.box {
+    border: 1px solid var(--foreground-color);
+    padding: 10px;
+    font-size: 12px;
+
+}
+
+.weekend {
+    color: var(--foreground-color);
+}
