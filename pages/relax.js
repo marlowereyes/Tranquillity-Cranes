@@ -13,7 +13,7 @@ export default function Support() {
 
   return (
     <>
-      <HeadArea title="Live Support" description="Learn about our app" />
+      <HeadArea title="Relax" description="Find the best media to help you relax" />
       <div className={styles.supportContainer}>
         <Header2 headerName={"Relax"} />
         <Card

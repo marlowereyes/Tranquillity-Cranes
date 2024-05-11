@@ -34,7 +34,7 @@ export default function LogIn() {
 
   return (
     <>
-      <HeadArea title="Login" description="Learn about our app" />
+      <HeadArea title="Tranquillity Cranes | Login" description="Please log in" />
       <main className={`${styles.main}`}>
         <Header />
         <div className={styles.logInContainer}>

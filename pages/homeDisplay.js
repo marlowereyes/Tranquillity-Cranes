@@ -25,7 +25,7 @@ export default function Display() {
 
   return (
     <>
-      <HeadArea title="Home" description="Learn about our app" />
+      <HeadArea title="Tranquillity Cranes | Home" description="Find everything in the main page of our app" />
       <div className={styles.mainHomeContainer}>
         <div className={styles.homeContainer}>
           {name && (

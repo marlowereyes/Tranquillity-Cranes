@@ -59,7 +59,7 @@ export default function MainTutorial() {
 
   return (
     <>
-      <HeadArea />
+      <HeadArea title="Tranquillity Cranes | Tutorial" description="Get a brief tutorial on how to use the app"/>
       <main className={`${styles.main}`}>
         <div className={styles.skipo}>
           <Link href="/home" className={styles.skip}>

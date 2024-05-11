@@ -35,7 +35,7 @@ export default function Home() {
     <>
       <HeadArea
         title="Tranquillity Cranes"
-        description="Please wait as we load the date for the application"
+        description="Please wait as we load the data for the application"
       />
       <main className={`${styles.main}`}>
         <div className={styles.mainContainer}>

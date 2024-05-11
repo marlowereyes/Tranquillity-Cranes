@@ -4,10 +4,12 @@ import NavBar from "@/components/NavBar";
 import Image from "next/image";
 import Link from "next/link";
 import Arrow from "@/components/Icons/Arrow";
+import HeadArea from "@/components/HeadArea";
 
 export default function aboutUs() {
   return (
     <>
+    <HeaderArea title="Tranquillity Cranes | About Us" description="Get to know the heart behind Tranquillity Cranes"/>
       <div className={styles.main}>
         <div className={styles.mainAUs}>
           <Header />

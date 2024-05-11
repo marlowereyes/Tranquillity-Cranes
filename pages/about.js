@@ -10,7 +10,7 @@ import Arrow from "@/components/Icons/Arrow";
 export default function About() {
   return (
     <>
-      <HeadArea title="About" description="Learn about our app" />
+      <HeadArea title="Tranquillity Cranes | About" description="Learn about our app" />
       <main className={`${styles.main}`}>
         <div className={styles.mainAbout}>
           <Header />

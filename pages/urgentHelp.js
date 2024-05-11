@@ -4,6 +4,8 @@ import Lines from "@/components/Lines";
 import { helpLines } from "@/data/lines";
 import NavBar from "@/components/NavBar";
 import Header from "@/components/Header";
+import Head from "next/head";
+import HeadArea from "@/components/HeadArea";
 
 export default function Home() {
   const [aboutActive, setAboutActive] = useState(true);
@@ -11,6 +13,7 @@ export default function Home() {
 
   return (
     <>
+      <HeadArea title="Tranquillity Cranes | Urgent Help" description="Find numbers to urgent help lines if you are in need of urgent help" />
       <main className={`${styles.main}`}>
         <div className={styles.mainHelpContainer}>
           <Header />

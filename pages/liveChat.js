@@ -53,7 +53,7 @@ export default function Chat() {
 
   return (
     <>
-      <HeadArea title="Live Chat" description="Learn about our app" />
+      <HeadArea title="Tranquillity Cranes | Live Chat" description="Chat with other users to find support and comfort" />
       <Header />
       <div className={styles.chat}>
         <h1>Welcome to the Chat Room</h1>

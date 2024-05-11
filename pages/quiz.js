@@ -11,7 +11,7 @@ import Header from "@/components/Header";
 export default function Home() {
   return (
     <>
-      <HeadArea title="Activities Quiz" description="Learn about our app" />
+      <HeadArea title="Tranquillity Cranes | Activities Quiz" description="Find the activity that best suits what you should implement into your daily life" />
       <main className={`${styles.main}`}>
         <Quiz />
         <NavBar />

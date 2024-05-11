@@ -10,7 +10,7 @@ export default function Results() {
   const resultId = query.resultId;
   return (
     <>
-      <HeadArea title="Results" description="Learn about our app" />
+      <HeadArea title="Results" />
       <div className={styles.resultContainer}>
         <ResultsContainer resultId={resultId} />
         <NavBar />

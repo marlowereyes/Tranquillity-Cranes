@@ -7,7 +7,7 @@ import NavBar from "@/components/NavBar";
 export default function Activities() {
   return (
     <>
-      <HeadArea title="Activities" description="Check Your Activities" />
+      <HeadArea title="Tranquillity Cranes | Activities" description="Organize a schedule for your daily habits/activities" />
       <div className={styles.mainActivitesContainer}>
         <div className={styles.activitiesContainer}>
           <Header />

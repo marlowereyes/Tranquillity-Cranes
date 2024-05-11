@@ -25,7 +25,7 @@ export default function Home() {
 
   return (
     <>
-      <HeadArea title="Breathe" description="Learn about our app" />
+      <HeadArea title="Tranquillity Cranes | Breathe" description="Stay calm through a guided breathing exercise" />
       <main className={`${styles.main}`}>
         <div
           className={styles.breatheAnimation}

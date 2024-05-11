@@ -12,7 +12,7 @@ import Arrow from "@/components/Icons/Arrow";
 export default function Profile() {
   return (
     <>
-      <HeadArea title="Profile" description="Learn about our app" />
+      <HeadArea title="Tranquillity Cranes | Profile" description="Edit your settings and learn about all things Tranquillity Cranes" />
       <main className={`${styles.main}`}>
         <div className={styles.mainProfile}>
           <Header2 headerName={"Profile"} />
