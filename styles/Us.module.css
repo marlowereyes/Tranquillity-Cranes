@@ -22,11 +22,6 @@
     width: 398px;
 }
 
-.usImg {
-    object-fit: cover;
-    border-radius: 30px;
-}
-
 .bold {
     font-weight: 700;
 }
@@ -45,4 +40,11 @@
 
 .flip {
     transform: scaleX(-1);
+}
+
+.usImg {
+    background-color: var(--background-color-3);
+    padding: 24px;
+    border-radius: 30px;
+    margin: 16px 0px;
 }

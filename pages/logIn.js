@@ -19,7 +19,6 @@ export default function LogIn() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Check if both name and image are selected before redirecting
     if (name && selectedImage) {
       router.push({
         pathname: '/homeDisplay',
