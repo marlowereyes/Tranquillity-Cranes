@@ -25,7 +25,7 @@ export default(props) => (
           <g mask="url(#mask0_1112_1829)">
             <path
               d="M10.7 29.3332L8.33333 26.9665L19.3 15.9998L8.33333 5.03317L10.7 2.6665L24.0333 15.9998L10.7 29.3332Z"
-              fill="#1C1B1F"
+              fill="var(--background-color-2)"
             />
           </g>
         </g>

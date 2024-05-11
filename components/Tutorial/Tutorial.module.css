@@ -1,0 +1,74 @@
+.tutorialContainer {
+    width: 430px;
+    background-color: var(--tutorial-background);
+    height: 130vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.card > p {
+    margin-bottom: 16px;
+}
+
+.talkAnimation.card-1 {
+    width: 250px;
+    margin-left: 64px;
+}
+
+.talkAnimation.card-2 {
+    width: 200px;
+    transform: scaleX(-1);
+    position:relative;
+    margin-top: -85px;
+    margin-left: 200px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.talkAnimation.card-3 {
+    transform: rotate(25deg) scaleX(-1);
+    width: 400px;
+    margin-left: 64px;
+    margin-top: -16px;
+}
+
+.talkAnimation.card-4 {
+    transform: rotate(25deg) scaleX(-1);
+    width: 400px;
+    margin-left: 64px;
+    margin-top: -16px;
+}
+
+.talkAnimation.card-5 {
+    transform: rotate(25deg) scaleX(-1);
+    width: 400px;
+    margin-left: 64px;
+    margin-top: -16px;
+}
+
+.talkAnimation.card-6 {
+    width: 300px;
+    margin-left: 88px;
+    transform: scaleX(-1);
+}
+
+.card {
+    background-color: var(--background-color-3);
+    padding: 24px 24px;
+    border-radius: 30px;
+    margin: 16px 16px 0px 16px;
+}
+
+.skipo > .skip {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.navigateButtons {
+    margin: 0px 16px;
+    display: flex;
+    gap: 8px;
+    z-index: 1;
+}

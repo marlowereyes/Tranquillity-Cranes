@@ -1,0 +1,17 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.skipo > .skip {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 430px;
+    background-color: var(--tutorial-background);
+    text-decoration: none;
+    color: var(--background-color-2);
+    padding-top: 16px;
+}

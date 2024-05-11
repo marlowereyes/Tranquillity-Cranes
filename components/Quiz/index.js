@@ -88,6 +88,7 @@ const Quiz = () => {
               style={{
                 backgroundColor: selectedAnswerIndex === answerIndex ? 'var(--accent-color)' : 'initial',
                 color: selectedAnswerIndex === answerIndex ? 'var(--foreground-color)' : 'var(--foreground-color)',
+                boxShadow: selectedAnswerIndex === answerIndex ? 'inset 0 4px 4px 0 rgba(0, 0, 0, 0.3)' : 'var(--box-shadow)'
               }}
             >
               {answer}
