@@ -23,7 +23,7 @@
 .animation__container {
   position: relative;
   overflow: hidden;
-  width: 300px;
+  max-width: 300px;
   margin-top: -232px;
 }
 

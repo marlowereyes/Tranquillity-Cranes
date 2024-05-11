@@ -27,8 +27,8 @@
 .aboutApp {
     display: flex;
     flex-direction: column;     
-    background-color: var(--background-color-3);   
-    border: 2px solid var(--background-color-3);
+
+    border: 2px solid var(--background-color);
     border-radius: 10px;
     margin-top: 20px;
     margin-bottom: 50px;
