@@ -20,7 +20,7 @@ export default function RadialMenu() {
         }`}
         onClick={() => setShowSubButtons(!showSubButtons)}
       >
-        <img src="../images/Logo 2.svg"></img>
+        <Image src="/images/Logo 2.svg" width={90} height={90}/>
       </button>
       {showSubButtons && (
         <div className={styles.subButtons}>
