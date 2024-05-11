@@ -17,6 +17,7 @@ export default function NavBar(){
                 <h3>Menu</h3>
                 </div>
                 <div className={styles.innerContainer}>
+                <Link className={styles.link} href="/profile"><button><Egg /></button></Link>
                 <h3>Profile</h3>
                 </div>
             </div>
