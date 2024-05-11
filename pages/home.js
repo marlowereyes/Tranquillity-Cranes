@@ -36,7 +36,7 @@ export default function Display() {
       <div className={styles.chatGPT}>
         <p>{motivationalQuote}</p>
       </div>
-      <Button text={'Tutorial'} href={'/'}/>
+      <Button text={'Tutorial'} href={'/mainTutorial'}/>
       <Button text={'Activities Quiz'} href={'/quiz'} bgColor={'var(--foreground-color)'} textColor={'var(--background-color-3)'}/>
       <NavBar />
     </div>

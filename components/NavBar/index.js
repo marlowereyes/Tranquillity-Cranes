@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 import styles from './NavBar.module.css'
 import RadialMenu from '../RadialMenu';
+import Egg from '../Icons/Egg';
 
 export default function NavBar(){
     return(
@@ -16,7 +17,7 @@ export default function NavBar(){
                 <h3>Menu</h3>
                 </div>
                 <div className={styles.innerContainer}>
-                <Link className={styles.link} href="/profile"><button><img src='../images/Profile.svg'></img></button></Link>
+                <Link className={styles.link} href="/profile"><button><Egg /></button></Link>
                 <h3>Profile</h3>
                 </div>
             </div>

@@ -9,7 +9,7 @@
     flex-direction: column;
     align-items: center;
     padding-bottom: 15rem;
-    background: var(--linear-gradient);
+    background: var(--linear-gradient-0);
     width: 430px;
 }
 
@@ -25,14 +25,15 @@
 }
 
 .chatGPT {
-    width: 366px;
-    padding: 16px 16px;
+    width: 325px;
+    padding: 24px 16px;
     text-align: center;
     margin: 16px 0px 8px 0px;
     border-radius: 30px;
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 700;
     color: var(--foreground-color);
+    border: solid;
 }
 
 
