@@ -1,8 +1,8 @@
-import { useState } from 'react';
-import styles from './Radio.module.css';
+import { useState } from "react";
+import styles from "./Radio.module.css";
 
 export default function LanguageSelector() {
-  const [selectedLanguage, setSelectedLanguage] = useState('');
+  const [selectedLanguage, setSelectedLanguage] = useState("");
 
   const handleLanguageChange = (event) => {
     setSelectedLanguage(event.target.value);

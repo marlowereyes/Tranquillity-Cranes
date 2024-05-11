@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import styles from './Quiz.module.css';
-import { useRouter } from 'next/router';
-import Image from 'next/image';
-import { QUESTIONS, RESULT_MAP } from './consts';
-import Header from '../Header';
-import Button from '../Button';
+import React, { useState, useEffect } from "react";
+import styles from "./Quiz.module.css";
+import { useRouter } from "next/router";
+import Image from "next/image";
+import { QUESTIONS, RESULT_MAP } from "./consts";
+import Header from "../Header";
+import Button from "../Button";
 
 const Quiz = () => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -36,7 +36,7 @@ const Quiz = () => {
 
   const calculateResult = () => {
     // Concatenate answer indices into a string, excluding the first question's answer index
-    const resultKey = answers.slice(1).join('');
+    const resultKey = answers.slice(1).join("");
     return resultKey;
   };
 
@@ -47,8 +47,11 @@ const Quiz = () => {
     return RESULT_MAP[resultKey] || "Unknown Result";
   };
 
-  const allQuestionsAnswered = answers.every(answer => answer !== null);
-  const progressBarWidth = currentQuestionIndex === 0 ? 25 : (currentQuestionIndex / QUESTIONS.length + 0.25) * 100;
+  const allQuestionsAnswered = answers.every((answer) => answer !== null);
+  const progressBarWidth =
+    currentQuestionIndex === 0
+      ? 25
+      : (currentQuestionIndex / QUESTIONS.length + 0.25) * 100;
 
   useEffect(() => {
     setPrevProgressBarWidth(progressBarWidth);
@@ -57,11 +60,11 @@ const Quiz = () => {
   useEffect(() => {
     if (allQuestionsAnswered) {
       router.push({
-        pathname: '/results',
+        pathname: "/results",
         query: { resultId: calculateResult() },
-      })
+      });
     }
-  }, [allQuestionsAnswered])
+  }, [allQuestionsAnswered]);
 
   return (
     <div className={styles.quizContainer}>
@@ -81,23 +84,43 @@ const Quiz = () => {
       {currentQuestionIndex < QUESTIONS.length ? (
         <div className={styles.questions}>
           <p>{QUESTIONS[currentQuestionIndex].question}</p>
-          {QUESTIONS[currentQuestionIndex].answers.map((answer, answerIndex) => (
-            <button
-              key={answerIndex}
-              onClick={() => handleAnswerSelect(answerIndex)}
-              style={{
-                backgroundColor: selectedAnswerIndex === answerIndex ? 'var(--accent-color)' : 'initial',
-                color: selectedAnswerIndex === answerIndex ? 'var(--foreground-color)' : 'var(--foreground-color)',
-                boxShadow: selectedAnswerIndex === answerIndex ? 'inset 0 4px 4px 0 rgba(0, 0, 0, 0.3)' : 'var(--box-shadow)'
-              }}
-            >
-              {answer}
-            </button>
-          ))}
+          {QUESTIONS[currentQuestionIndex].answers.map(
+            (answer, answerIndex) => (
+              <button
+                key={answerIndex}
+                onClick={() => handleAnswerSelect(answerIndex)}
+                style={{
+                  backgroundColor:
+                    selectedAnswerIndex === answerIndex
+                      ? "var(--accent-color)"
+                      : "initial",
+                  color:
+                    selectedAnswerIndex === answerIndex
+                      ? "var(--foreground-color)"
+                      : "var(--foreground-color)",
+                  boxShadow:
+                    selectedAnswerIndex === answerIndex
+                      ? "inset 0 4px 4px 0 rgba(0, 0, 0, 0.3)"
+                      : "var(--box-shadow)",
+                }}
+              >
+                {answer}
+              </button>
+            )
+          )}
           <div className={styles.navigateQuiz}>
-            <Button onClick={handlePrevious} text={'Previous'} disabled={currentQuestionIndex === 0}/>
+            <Button
+              onClick={handlePrevious}
+              text={"Previous"}
+              disabled={currentQuestionIndex === 0}
+            />
             {selectedAnswerIndex !== null && (
-              <Button onClick={handleNextClick} text={'Next'} bgColor={'var(--foreground-color)'} textColor={'var(--background-color-3)'}/>
+              <Button
+                onClick={handleNextClick}
+                text={"Next"}
+                bgColor={"var(--foreground-color)"}
+                textColor={"var(--background-color-3)"}
+              />
             )}
           </div>
         </div>

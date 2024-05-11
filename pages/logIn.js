@@ -1,15 +1,15 @@
 import styles from "@/styles/LogIn.module.css";
 import Link from "next/link";
-import { useState } from 'react';
-import { useRouter } from 'next/router';
+import { useState } from "react";
+import { useRouter } from "next/router";
 import HeadArea from "@/components/HeadArea";
 import Button from "@/components/Button";
 import Header from "@/components/Header";
 
 export default function LogIn() {
-  const [name, setName] = useState('');
-  const [selectedImage, setSelectedImage] = useState('');
-  const [clickedImage, setClickedImage] = useState('');
+  const [name, setName] = useState("");
+  const [selectedImage, setSelectedImage] = useState("");
+  const [clickedImage, setClickedImage] = useState("");
   const router = useRouter();
 
   const handleImageClick = (imageName) => {
@@ -21,20 +21,20 @@ export default function LogIn() {
     e.preventDefault();
     if (name && selectedImage) {
       router.push({
-        pathname: '/homeDisplay',
-        query: { 
-          imageName: selectedImage, 
+        pathname: "/homeDisplay",
+        query: {
+          imageName: selectedImage,
           name: name,
         },
       });
     } else {
-      alert('Please enter your name and choose an image.');
+      alert("Please enter your name and choose an image.");
     }
   };
 
   return (
     <>
-      <HeadArea title="Login" description="Learn about our app"/>
+      <HeadArea title="Login" description="Learn about our app" />
       <main className={`${styles.main}`}>
         <Header />
         <div className={styles.logInContainer}>
@@ -50,54 +50,49 @@ export default function LogIn() {
             />
             <h2>Choose an egg that resonates with you the most</h2>
             <div className={styles.imagesContainer}>
-              <div 
-                className={`${styles.imageContainer} ${clickedImage === 'egg1' ? styles.clicked : ''}`}
-                onClick={() => handleImageClick('egg1')}
-                onKeyDown={() => handleImageClick('egg1')}
+              <div
+                className={`${styles.imageContainer} ${
+                  clickedImage === "egg1" ? styles.clicked : ""
+                }`}
+                onClick={() => handleImageClick("egg1")}
+                onKeyDown={() => handleImageClick("egg1")}
                 tabindex="1"
               >
-                <img
-                  src="./images/egg1.png"
-                  alt="Image 1"
-                />
-                
+                <img src="./images/egg1.png" alt="Image 1" />
               </div>
-              <div 
-                className={`${styles.imageContainer} ${clickedImage === 'egg2' ? styles.clicked : ''}`}
-                onClick={() => handleImageClick('egg2')}
-                onKeyDown={() => handleImageClick('egg2')}
+              <div
+                className={`${styles.imageContainer} ${
+                  clickedImage === "egg2" ? styles.clicked : ""
+                }`}
+                onClick={() => handleImageClick("egg2")}
+                onKeyDown={() => handleImageClick("egg2")}
                 tabindex="2"
               >
-                <img
-                  src="./images/egg2.png"
-                  alt="Image 2"
-                />
+                <img src="./images/egg2.png" alt="Image 2" />
               </div>
-              <div 
-                className={`${styles.imageContainer} ${clickedImage === 'egg3' ? styles.clicked : ''}`}
-                onClick={() => handleImageClick('egg3')}
-                onKeyDown={() => handleImageClick('egg3')}
+              <div
+                className={`${styles.imageContainer} ${
+                  clickedImage === "egg3" ? styles.clicked : ""
+                }`}
+                onClick={() => handleImageClick("egg3")}
+                onKeyDown={() => handleImageClick("egg3")}
                 tabindex="3"
               >
-                <img
-                  src="./images/egg3.png"
-                  alt="Image 3"
-                />
+                <img src="./images/egg3.png" alt="Image 3" />
               </div>
-              <div 
-                className={`${styles.imageContainer} ${clickedImage === 'egg4' ? styles.clicked : ''}`}
-                onClick={() => handleImageClick('egg4')}
-                onKeyDown={() => handleImageClick('egg4')}
+              <div
+                className={`${styles.imageContainer} ${
+                  clickedImage === "egg4" ? styles.clicked : ""
+                }`}
+                onClick={() => handleImageClick("egg4")}
+                onKeyDown={() => handleImageClick("egg4")}
                 tabindex="4"
               >
-                <img
-                  src="./images/egg4.png"
-                  alt="Image 4"
-                />
+                <img src="./images/egg4.png" alt="Image 4" />
               </div>
             </div>
             <div className={styles.submitEggContainer}>
-            <Button text={'Submit'}/>
+              <Button text={"Submit"} />
             </div>
           </form>
         </div>

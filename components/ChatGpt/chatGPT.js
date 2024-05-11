@@ -1,25 +1,21 @@
 import React from "react";
 
 function quoteBox({ generateQuote, onSelectChange, selectedValue }) {
-    const quoteFilterOptions = [ 
-        "Filter",
-        "Inspiration",
-        "Motivation",
-        "Academic",
-        "Religious",
-        "Masculine",
-        "Feminie",
-    ];
-    const handleSelectChange = (e) => {
-        conSelectChange(e.target.value);
-    };
+  const quoteFilterOptions = [
+    "Filter",
+    "Inspiration",
+    "Motivation",
+    "Academic",
+    "Religious",
+    "Masculine",
+    "Feminie",
+  ];
+  const handleSelectChange = (e) => {
+    conSelectChange(e.target.value);
+  };
 
-    return (
-        <></>
-    )
+  return <></>;
 }
-
-
 
 // import { useEffect, useState } from "react";
 // import styles from '@/styles/HomeDisplay.module.css'
@@ -43,7 +39,7 @@ function quoteBox({ generateQuote, onSelectChange, selectedValue }) {
 //         'Authorization': `Bearer ${apiKey}`
 //         }
 //       });
-      
+
 //       const data = await response.json();
 
 //       if (data && Array.isArray(data) && data.length > 0) {
@@ -57,7 +53,7 @@ function quoteBox({ generateQuote, onSelectChange, selectedValue }) {
 
 //   return (
 //     <>
-    
+
 //       <HeadArea title="Home" description="Learn about our app"/>
 //       <div className={styles.homeContainer}>
 //         <div className={styles.chatGPT}>
@@ -67,9 +63,7 @@ function quoteBox({ generateQuote, onSelectChange, selectedValue }) {
 //         <Link href='/quiz' className={styles.homeLinks}><button className={styles.lightBlue}>Activities Quiz</button></Link>
 //         <NavBar />
 //       </div>
-      
+
 //     </>
 //   )
 // }
-
-

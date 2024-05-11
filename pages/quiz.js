@@ -11,10 +11,10 @@ import Header from "@/components/Header";
 export default function Home() {
   return (
     <>
-      <HeadArea title="Activities Quiz" description="Learn about our app"/>
+      <HeadArea title="Activities Quiz" description="Learn about our app" />
       <main className={`${styles.main}`}>
         <Quiz />
-       <NavBar/>
+        <NavBar />
       </main>
     </>
   );

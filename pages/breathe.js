@@ -25,10 +25,13 @@ export default function Home() {
 
   return (
     <>
-      <HeadArea title="Breathe" description="Learn about our app"/>
+      <HeadArea title="Breathe" description="Learn about our app" />
       <main className={`${styles.main}`}>
-        <div className={styles.breatheAnimation} ref={breatheAnimationContainer} />
-        <NavBar/>
+        <div
+          className={styles.breatheAnimation}
+          ref={breatheAnimationContainer}
+        />
+        <NavBar />
       </main>
     </>
   );

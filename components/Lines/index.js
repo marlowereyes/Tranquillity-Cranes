@@ -12,10 +12,12 @@ export default function Lines({ helpLines, showContact, showAbout }) {
                 <h3>{line.description}</h3>
                 {showAbout && <p>{line.about}</p>}
                 <div className={styles.contacts}>
-                {showContact &&
-                  line.contact &&
-                  line.contact.map((contact, ind) => <div key={ind}>{contact}</div>)}
-                  </div>
+                  {showContact &&
+                    line.contact &&
+                    line.contact.map((contact, ind) => (
+                      <div key={ind}>{contact}</div>
+                    ))}
+                </div>
               </div>
             ))}
         </div>

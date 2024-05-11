@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
-import styles from './Switch.module.css'; // Import CSS for styling
+import React, { useState } from "react";
+import styles from "./Switch.module.css"; // Import CSS for styling
 
-const Switch = ({ onDarkModeToggle }) => { // Receive onDarkModeToggle as a prop
+const Switch = ({ onDarkModeToggle }) => {
+  // Receive onDarkModeToggle as a prop
   const [isChecked, setIsChecked] = useState(false); // Initial state is false (switch off)
 
   const toggleSwitch = () => {

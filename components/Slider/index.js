@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import styles from './Slider.module.css';
+import { useState } from "react";
+import styles from "./Slider.module.css";
 
 export default function Slider() {
   const [fontSize, setFontSize] = useState(16); // Initial font size
@@ -23,4 +23,3 @@ export default function Slider() {
     </div>
   );
 }
-

@@ -17,20 +17,29 @@ export default function Home() {
           <h1>Urgent Help Lines</h1>
           <div className={styles.buttonContainer}>
             <button
-              className={`${styles.button} ${aboutActive ? styles.activeButton : ""}`}
+              className={`${styles.button} ${
+                aboutActive ? styles.activeButton : ""
+              }`}
               onClick={() => setAboutActive(!aboutActive)}
             >
               About<span className={styles.check}> ✓</span>
             </button>
             <button
-              className={`${styles.button} ${contactActive ? styles.activeButton : ""}`}
+              className={`${styles.button} ${
+                contactActive ? styles.activeButton : ""
+              }`}
               onClick={() => setContactActive(!contactActive)}
             >
               Contact<span className={styles.check}> ✓</span>
             </button>
           </div>
-          <Lines helpLines={helpLines} showAbout={aboutActive} showContact={contactActive} className={styles.lines}/>
-          <NavBar/>
+          <Lines
+            helpLines={helpLines}
+            showAbout={aboutActive}
+            showContact={contactActive}
+            className={styles.lines}
+          />
+          <NavBar />
         </div>
       </main>
     </>
