@@ -9,7 +9,7 @@ import HeadArea from "@/components/HeadArea";
 export default function aboutUs() {
   return (
     <>
-    <HeaderArea title="Tranquillity Cranes | About Us" description="Get to know the heart behind Tranquillity Cranes"/>
+    <HeadArea title="Tranquillity Cranes | About Us" description="Get to know the heart behind Tranquillity Cranes"/>
       <div className={styles.main}>
         <div className={styles.mainAUs}>
           <Header />
