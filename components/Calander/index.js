@@ -1,4 +1,5 @@
 import styles from "./Calander.module.css";
+import Link from "next/link";
 
 export default function Calander() {
   return (
@@ -16,7 +17,9 @@ export default function Calander() {
           <div class={styles.old}>28</div>
           <div class={styles.old}>29</div>
           <div class={styles.old}>30</div>
-          <div class={styles.box}>1</div>
+          <Link href="/tasks">
+            <div class={styles.box}>1</div>
+          </Link>
           <div class={styles.box}>2</div>
           <div class={styles.box}>3</div>
           <div class={styles.box}>4</div>
