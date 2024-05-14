@@ -61,6 +61,11 @@
     font-size: 17px;
 }
 
+.mainTasksContainer {
+    display: flex;
+    justify-content: center;
+}
+
 /* --background-color: #FFFDFA;
     --background-color-2: #323232;
     --background-color-3: #A0E4FF;
