@@ -17,7 +17,7 @@ export default function Support() {
       <div className={styles.supportContainer}>
         <Header2 headerName={"Support"} />
         <Card
-          hrefCard={"/liveChat"}
+          hrefCard={"https://t-c-testing-production.up.railway.app/liveChat"}
           src={"/images/supportCardImg/liveChatImg.jpg"}
           textB={"Chat!"}
           bgBColor={"var(--foreground-color)"}
